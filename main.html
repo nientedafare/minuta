@@ -31,7 +31,7 @@ March 2014
     <meta name="viewport" content="width=device-width">
 
 <!-- Tumblr Theme configuration -->
-    
+
     <meta name="image:Page Pattern" content=""/>
     <meta name="image:Media Pattern" content=""/>
     <meta name="image:Header" content=""/>
@@ -53,13 +53,7 @@ March 2014
     <meta name="color:Text" content="#333333"/>
     <meta name="color:Note" content="#333333"/>
     <meta name="color:Highlighted Text" content="#fffc00"/>
-    <meta name="color:Icons Color" content="#333333"/>
-    
-    <meta name="color:Illustration" content="#444444"/>
-    <meta name="color:Illustr Caption" content="#ffffff"/>
-    <meta name="color:Illustr Caption Border" content="#5b9eb6"/>
-    <meta name="color:Illustr Caption Background" content="#5b9eb6"/>
-    
+
     <meta name="font:Blog Title" content="Georgia"/>
     <meta name="font:Post Title" content="Lucida Sans"/>
     <meta name="font:Subheading" content="Georgia"/>
@@ -84,7 +78,13 @@ March 2014
     <meta name="select:Link Hover decoration" content="overline" title="overline">
     <meta name="select:Page Background Position" content="scroll" title="scroll">
     <meta name="select:Page Background Position" content="fixed" title="fixed">
+    <meta name="select:Icons Color" content="b" title="Black">
+    <meta name="select:Icons Color" content="w" title="White">
     
+    <meta name="if:Show Post icons" content="1"/>
+    <meta name="if:Show Author Title" content="0"/>
+    <meta name="if:Show Author Name" content="1"/>
+    <meta name="if:Show Group Members" content="1"/>
     <meta name="if:Slim Layout" content="0">
     <meta name="if:All In One Column" content="0">
     <meta name="if:iPad Portrait 2 columns" content="1">
@@ -93,28 +93,15 @@ March 2014
     <meta name="if:Blog Title Italic" content="0"/>
     <meta name="if:Show Strapline" content="0"/>
     <meta name="if:Show Description Arrow" content="1"/>
-    <meta name="if:Show Author Title" content="0"/>
-    <meta name="if:Show Author Name" content="1"/>
-    <meta name="if:Show Group Members" content="1"/>
     <meta name="if:Century or System Body font" content="1"/>
     <meta name="if:Initial Letter as first letter" content="1"/>
     <meta name="if:First Line in small caps" content="0"/>
-    <meta name="if:Show Post icons" content="1"/>
-    <meta name="if:Show Text Post icon" content="1"/>
-    <meta name="if:Oldfashion Post icons" content="1"/>
-	<meta name="if:Anarquia Post icons" content="0"/>
-	<meta name="if:Silhouette Post icons" content="0"/>
-	<meta name="if:Springtime Post icons" content="0"/>
-	<meta name="if:Unca Pale Comics" content="0"/>
-    <meta name="if:Farsi Chere Comics" content="0"/>
-    <meta name="if:You And Me Comics" content="0"/>
-    <meta name="if:Menschenskinder Comics" content="0"/>
     <meta name="if:Photo and Video Title on top" content="0"/>
     <meta name="if:Black And White Photo" content="1"/>
     <meta name="if:Black And White Video" content="0"/>
-	<meta name="if:Show Photo Exif Data" content="1"/>
-	<meta name="if:Use HighRes Photos" content="1"/>
-	<meta name="if:Vinyl Audio Player" content="1"/>
+    <meta name="if:Show Photo Exif Data" content="1"/>
+    <meta name="if:Use HighRes Photos" content="1"/>
+    <meta name="if:Vinyl Audio Player" content="1"/>
     <meta name="if:Audio Player white" content="0"/>
     <meta name="if:Audio Player grey" content="0"/>
     <meta name="if:Audio Player black" content="1"/>
@@ -123,7 +110,7 @@ March 2014
     <meta name="if:Show Disqus" content="0"/>
     <meta name="if:Social Sharing buttons" content="0"/>
     <meta name="if:ShareThis popup" content="0"/>
-	<meta name="if:Show Twitter Update" content="0"/>
+    <meta name="if:Show Twitter Update" content="0"/>
     <meta name="if:Show Archive" content="1"/>
     <meta name="if:Show RSS" content="1"/>
     <meta name="if:Show Search" content="1"/>
@@ -160,39 +147,17 @@ March 2014
     <meta name="text:Break" content="&#167;"/>
     <meta name="text:Break font size" content="1.5em"/>
     <meta name="text:Break margins" content="1.5em"/>
-    <meta name="text:Chapter before" content=""/>
-    <meta name="text:Chapter after" content=""/>
-    <meta name="text:Section before" content="q"/>
-    <meta name="text:Section after" content="Q"/>
-    <meta name="text:Subsection before" content="="/>
-    <meta name="text:Subsection after" content=""/>
-    <meta name="text:Paragraph before" content="y"/>
-    <meta name="text:Paragraph after" content="Y"/>
     <meta name="text:Author Border width" content="1px"/>
     <meta name="text:Post icons size" content="3em"/>
     <meta name="text:Post icons bottom" content="0.5em"/>
     <meta name="text:Twitter Updates icon" content="t"/>
-    <meta name="text:Text Post icon" content="G"/>
-    <meta name="text:Photo Post icon" content="9"/>
-	<meta name="text:Panorama Post icon" content="6"/>
-    <meta name="text:Photoset Post icon" content="d"/>
-    <meta name="text:Quote Post icon" content="n"/>
-    <meta name="text:Link Post icon" content="Y"/>
-    <meta name="text:Chat Post icon" content="5"/>
-    <meta name="text:Music Post icon" content="v"/>
-    <meta name="text:Video Post icon" content="R"/>
-    <meta name="text:Answer Post icon" content="A"/>
-    <meta name="text:Search Form before" content="C"/>
-    <meta name="text:Search Form after" content="c"/>
 
 <!-- END Tumblr Theme configuration -->
     
-
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="apple-touch-icon" href="{PortraitURL-128}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     
-
     <style type="text/css">
        
 p{text-align:justify;}
@@ -212,22 +177,58 @@ a:active,a:hover{outline:0;}
 .twocolumns blockquote + h2 {margin: 1em 0;}
 p + h2 {margin: .83em 0;}
 h2{font-size:{text:Post Title size};margin: 0em 0 .83em 0; font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title};text-transform:{select:Post Title transform};text-align:center;letter-spacing:-0.5px;}
-h2:before {content: "{text:Chapter before} ";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal}
-h2:after {content: " {text:Chapter after}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal}
+h2:before {content: "{text:Chapter before} ";font-family: 'ornements_adfregular'; text-transform:none;font-weight:normal;font-variant:normal}
+h2:after {content: " {text:Chapter after}";font-family: 'ornements_adfregular'; text-transform:none;font-weight:normal;font-variant:normal}
 h2 a {text-decoration:none;font-variant:small-caps; text-transform:{select:Post Title transform};color:{color:Post Title};text-transform:none;letter-spacing:-0.5px;}
 h2 a:visited {text-decoration:none;font-variant:small-caps; text-transform:{select:Post Title transform};color:{color:Post Title};text-transform:none;letter-spacing:-0.5px;}
 .twocolumns blockquote + h3 {margin: 1em 0;}
 p + h3 {margin: 1em 0;}
 h3{font-size:1.2em;margin:0 0 1em 0;text-align:center;font-family: {font:Title};color:{color:Text};}
-h3:before {content: "{text:Section before} ";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal}
-h3:after {content: " {text:Section after}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal}
+h3:before{
+        font-family: 'ornements_adfregular'; 
+        text-transform:none;
+        font-weight:normal;
+        font-variant:normal;
+        
+        background-image: url(https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_section_before_{select:Icons Color}.png);
+        background-size: 57px 10px;
+        /* width: 5px; */
+        height: 15px;
+        padding-left: 27px;
+        content: "";
+        background-repeat: no-repeat;
+        /* background-color: red; */
+        background-size: 100%;
+        display: inline-block;
+        /* margin-bottom: -5px; */
+        margin-right: 7px;
+    }
+h3:after {
+        font-family: 'ornements_adfregular'; 
+        text-transform:none;
+        font-weight:normal;
+        font-variant:normal;
+        
+        background-image: url(https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_section_after_b.png);
+        background-size: 57px 10px;
+        /* width: 5px; */
+        height: 15px;
+        padding-right: 27px;
+        content: "";
+        background-repeat: no-repeat;
+        /* background-color: red; */
+        background-size: 100%;
+        display: inline-block;
+        /* margin-bottom: -5px; */
+        margin-left: 7px;
+    }
 h3 a{font-size:1.2em;margin:1em 0;text-align:center;font-family: {font:Title};color:{color:Text};}
 h3 a:visited{font-size:1.2em;margin:1em 0;text-align:center;font-family: {font:Title};color:{color:Text};}
 .twocolumns blockquote + h4 {margin: 1.33em 0;}
 p + h4 {margin: 1.33em 0;}
 h4{font-size:1em;margin: 0 0 1.33em 0;font-family: {font:Title};text-transform:uppercase;color:{color:Text};}
-h4:before {content: "{text:Subsection before} ";color:{color:Text};font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;}
-h4:after {content: " {text:Subsection after}";color:{color:Text};font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;}
+h4:before {content: "{text:Subsection before} ";color:{color:Text};font-family: 'ornements_adfregular'; text-transform:none;font-weight:normal;}
+h4:after {content: " {text:Subsection after}";color:{color:Text};font-family: 'ornements_adfregular'; text-transform:none;font-weight:normal;}
 h4 a{font-size:1em;margin:1.33em 0;font-family: {font:Title};text-transform:uppercase;color:{color:Text};}
 h4 a:visited{font-size:0.83em;margin:1.33em 0;font-family: {font:Title};text-transform:uppercase;color:{color:Text};}
 .twocolumns blockquote + h5 {margin: 1.67em 0;}
@@ -256,8 +257,6 @@ hr + div{margin-top: 1em;}
 figure + p{margin-top: 2em;}
 kbd,samp{font-family:monospace,serif; font-family: Courier, "Courier New", monospace;font-size:0.9em}
 code{font-size:.85em;margin:1.67em 0;font-family: {font:Subheading};font-weight: bold;font-variant:small-caps;}
-code:before {content: "{text:Paragraph before} ";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal}
-code:after {content: " {text:Paragraph after}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal}
 blockquote {margin: 1.5em 3%;background-color: {color:Media Background};padding: 3% 4%;color: {color:Note};font-style:italic;font-family:{font:Cursive};letter-spacing:{text:Cursive tracking};line-height:{text:Cursive leading};}
 blockquote > blockquote {margin-top:0.5em;margin-bottom:0.5em;margin-right:0px; opacity:0.9;padding-right:0;}
 pre {margin: 0 auto;max-width: 60%;background: {color:Media Background};padding: 3% 4%;white-space:pre;white-space:pre-wrap;word-wrap:break-word;font-style:italic;font-size:0.9em;font-family: {font:Cursive};letter-spacing:{text:Cursive tracking};line-height:{text:Cursive leading};color: {color:Note};word-break:normal !important;word-wrap:normal !important;white-space:pre !important;overflow:auto;}
@@ -334,15 +333,85 @@ border-radius: 5px;}
     .st_sharethis_large {cursor:pointer;}
     .stButton, .stLarge {display:none;height: 0 !important;width: 0 !important;}
     .cerca{margin: 0 auto;display:block;text-align:center;}
-    .cerca form:before{content:"{text:Search Form before}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal;font-size:1.8em;}
-    .cerca form:after{content:"{text:Search Form after}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal;font-size:1.8em;}
+    .cerca form:before{
+        font-family: 'ornements_adfregular'; 
+        text-transform:none;
+        font-weight:normal;
+        font-variant:normal;
+        
+        background-image: url(https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_search_before_b.png);
+        background-size: 57px 10px;
+        /* width: 5px; */
+        height: 15px;
+        padding-left: 45px;
+        content: "";
+        background-repeat: no-repeat;
+        /* background-color: red; */
+        background-size: 100%;
+        display: inline-block;
+        margin-bottom: -5px;
+        margin-right: 1px;
+    }
+    .cerca form:after{
+        font-family: 'ornements_adfregular'; 
+        text-transform:none;
+        font-weight:normal;
+        font-variant:normal;
+    
+        background-image: url(https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_search_after_b.png);
+        background-size: 57px 10px;
+        height: 15px;
+        padding-right: 45px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        margin-bottom: -5px;
+        margin-left: 1px;
+    }
     .cerca input {font-family: {font:Blog Title};text-align:center;}
     .cerca1{margin: 2.5em auto -0.5em auto;display:block;text-align:center;font-size:.75em;}
-    .cerca1 form:before{content:"{text:Search Form before}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal;font-size:1.8em;}
-    .cerca1 form:after{content:"{text:Search Form after}";font-family: "ornements_adfregular"; text-transform:none;font-weight:normal;font-variant:normal;font-size:1.8em;}
+    .cerca1 form:before{
+        font-family: 'ornements_adfregular'; 
+        text-transform:none;
+        font-weight:normal;
+        font-variant:normal;
+        
+        background-image: url(https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_search_before_b.png);
+        background-size: 57px 10px;
+        /* width: 5px; */
+        height: 15px;
+        padding-left: 45px;
+        content: "";
+        background-repeat: no-repeat;
+        /* background-color: red; */
+        background-size: 100%;
+        display: inline-block;
+        margin-bottom: -5px;
+        margin-right: 1px;
+    }
+    .cerca1 form:after{
+        font-family: 'ornements_adfregular'; 
+        text-transform:none;
+        font-weight:normal;
+        font-variant:normal;
+    
+        background-image: url(https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_search_after_b.png);
+        background-size: 57px 10px;
+        height: 15px;
+        padding-right: 45px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        margin-bottom: -5px;
+        margin-left: 1px;
+    }
     .cerca1 input {font-family: {font:Blog Title};text-align:center;}
  
-    
+    .cercaimg img, .cerca img {
+        width: 20px;
+    }
 /* -- Group Members -- */
 
     .group_members {
@@ -415,23 +484,31 @@ border-radius: 5px;}
         margin:  -0.5em auto 1.5em auto;
         width: 40%;
     }
-	
+    .icoimg {
+        margin: 0 auto;
+        width: 65px;
+        padding: 1em 0 1.5em 0;
+    }
+	.icoimg img {
+	    width: 100%;
+	}
     {block:IfOldfashionPostIcons}
 		.tipologia {
 			margin: 0 auto {text:Post icons bottom} auto;
 			display: block;
 			font-size: {text:Post icons size};
-			font-family: "oldfashionpeopletworegular"; 
+			font-family: 'oldfashionpeopletworegular'; 
 			text-align: center;
 			color: {color:Icons Color};
 		}
+		
 	{/block:IfOldfashionPostIcons}
 	{block:IfAnarquiaPostIcons}
         .tipologia {
             margin: 0 auto {text:Post icons bottom} auto;
             display: block;
             font-size: {text:Post icons size};
-            font-family: "anarquia_v1.0_betaregular"; 
+            font-family: 'anarquia_v1.0_betaregular'; 
             text-align: center;
             color: {color:Icons Color};
         }
@@ -441,7 +518,7 @@ border-radius: 5px;}
             margin: 0 auto {text:Post icons bottom} auto;
             display: block;
             font-size: {text:Post icons size};
-            font-family: "sexy_silouette_stencilsRg"; 
+            font-family: 'sexy_silouette_stencilsRg'; 
             text-align: center;
             color: {color:Icons Color};
         }
@@ -451,7 +528,7 @@ border-radius: 5px;}
             margin: 0 auto {text:Post icons bottom} auto;
             display: block;
             font-size: {text:Post icons size};
-            font-family: "wwspringtimeregular"; 
+            font-family: 'wwspringtimeregular'; 
             text-align: center;
             color: {color:Icons Color};
         }
@@ -844,7 +921,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
     
     {block:IfBreakOrnementsFont}
       #divisore a {
-        font-family: "ornements_adfregular";
+        font-family: 'ornements_adfregular';
       }
     {/block:IfBreakOrnementsFont}
     {block:IfNotBreakOrnementsFont}
@@ -912,7 +989,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         content: "r ";
         float:left;
         margin-right:0.5em;
-        font-family: "ornements_adfregular";
+        font-family: 'ornements_adfregular';
     }
     q.sfondodomanda {
         background: {color:Media Background};
@@ -961,81 +1038,56 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
     
 /* -- Dingbats -- */
 
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 15, 2014 */
 @font-face {
-    font-family: "ornements_adfregular";
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/ornementsadf-webfont.eot');
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/ornementsadf-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/ornementsadf-webfont.woff') format('woff'),
-         url('http://static.tumblr.com/qbdaa2m/W8Un2hi0v/ornementsadf-webfont.ttf') format('truetype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/ornementsadf-webfont.svg#ornements_adfregular') format('svg');
+    font-family: 'ornements_adfregular';
+    src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/ornementsadf_minuta.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 {block:IfOldfashionPostIcons}
-	/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 19, 2014 */
 	@font-face {
-		font-family: "oldfashionpeopletworegular";
-		src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/oldfashionpeopleminuta-webfont.eot');
-		src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/oldfashionpeopleminuta-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/oldfashionpeopleminuta-webfont.woff') format('woff'),
-			 url('http://static.tumblr.com/qbdaa2m/yjTn3pxqp/oldfashionpeopleminuta-webfont.ttf') format('truetype'),
-		    url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/oldfashionpeopleminuta-webfont.svg#oldfashionpeopletworegular') format('svg');
+		font-family: 'oldfashionpeopletworegular';
+		src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/oldfashionpeople_minuta.woff2) format('woff2');
 		font-weight: normal;
 		font-style: normal;
 	}
 	.bloccotweet h5:before {
-        font-family: "oldfashionpeopletworegular"; 
+        font-family: 'oldfashionpeopletworegular'; 
     }
 {/block:IfOldfashionPostIcons}
 {block:IfAnarquiaPostIcons}
-	/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 23, 2014 */
 	@font-face {
-		font-family: "anarquia_v1.0_betaregular";
-		src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/anarvb-webfont.eot');
-		src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/anarvb-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/anarvb-webfont.woff') format('woff'),
-			 url('http://static.tumblr.com/qbdaa2m/xiBn2wj3x/anarvb-webfont.ttf') format('truetype'),
-			 url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/anarvb-webfont.svg#anarquia_v1.0_betaregular') format('svg');
+		font-family: 'anarquia_v1.0_betaregular';
+		src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/anarvb_minuta.woff2) format('woff2');
 		font-weight: normal;
 		font-style: normal;
 	}
     .bloccotweet h5:before {
-        font-family: "anarquia_v1.0_betaregular"; 
+        font-family: 'anarquia_v1.0_betaregular'; 
     }
 {/block:IfAnarquiaPostIcons}
 
 {block:IfSilhouettePostIcons}
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 24, 2014 */
 @font-face {
-    font-family: "sexy_silouette_stencilsRg";
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/sexysilouettestencils_pulito-webfont.eot');
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/sexysilouettestencils_pulito-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/sexysilouettestencils_pulito-webfont.woff') format('woff'),
-         url('http://static.tumblr.com/qbdaa2m/YAnn2xmdq/sexysilouettestencils_pulito-webfont.ttf') format('truetype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/sexysilouettestencils_pulito-webfont.svg#sexy_silouette_stencilsRg') format('svg');
+    font-family: 'sexy_silouette_stencilsRg';
+    src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/sexysilouettestencils_minuta.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
     .bloccotweet h5:before {
-        font-family: "sexy_silouette_stencilsRg"; 
+        font-family: 'sexy_silouette_stencilsRg'; 
     } 
 {/block:IfSilhouettePostIcons}
 
 {block:IfSpringtimePostIcons}
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on July 9, 2014 */
 @font-face {
-    font-family: "wwspringtimeregular";
-    src: url('https://googledrive.com/host/0B17WxMM7GDfwWFpHd21wVHBwODQ/wwspringtime-webfont.eot');
-    src: url('https://googledrive.com/host/0B17WxMM7GDfwWFpHd21wVHBwODQ/wwspringtime-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://googledrive.com/host/0B17WxMM7GDfwWFpHd21wVHBwODQ/wwspringtime-webfont.woff') format('woff'),
-         url('http://static.tumblr.com/qbdaa2m/YY2n8gcaq/wwspringtime-webfont.ttf') format('truetype'),
-         url('https://googledrive.com/host/0B17WxMM7GDfwWFpHd21wVHBwODQ/wwspringtime-webfont.svg#wwspringtimeregular') format('svg');
+    font-family: 'wwspringtimeregular';
+    src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/wwspringtime_minuta.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
     .bloccotweet h5:before {
-        font-family: "wwspringtimeregular"; 
+        font-family: 'wwspringtimeregular'; 
     } 
 {/block:IfSpringtimePostIcons}
 
@@ -1495,14 +1547,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
 /* -- Illustrations -- */
 
 {block:IfUncaPaleComics}
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on December 29, 2013 */
 @font-face {
-    font-family: "unca Pale";
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/uncapale-webfont.eot');
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/uncapale-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/uncapale-webfont.woff') format('woff'),
-         url('http://static.tumblr.com/qbdaa2m/2wLmym7s3/uncapale.ttf') format('truetype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/uncapale-webfont.svg#illustrissimsmedium') format('svg');
+    font-family: 'unca Pale';
+    src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/uncapale_minuta.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -1513,7 +1560,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 0px -0.08em 5%;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size}; 
-        font-family: "unca Pale";  
+        font-family: 'unca Pale';  
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1559,7 +1606,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 4% -0.08em 0px;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size};
-        font-family: "unca Pale"; 
+        font-family: 'unca Pale'; 
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1602,14 +1649,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
 {/block:IfUncaPaleComics}
 
 {block:IfYouAndMeComics}
-/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
 @font-face {
-    font-family: "YouAndMe";
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/YouAndMe.eot');
-    src: url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/YouAndMe.eot?#iefix') format('embedded-opentype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/YouAndMe.woff') format('woff'),
-         url('http://static.tumblr.com/qbdaa2m/rLxn2lko1/youandme.ttf') format('truetype'),
-         url('https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/YouAndMe.svg#YouAndMe') format('svg');
+    font-family: 'YouAndMe';
+    src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/youandme_minuta.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -1620,7 +1662,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 0px -0.08em 5%;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size}; 
-        font-family: "YouAndMe";  
+        font-family: 'YouAndMe';  
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1666,7 +1708,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 4% -0.08em 0px;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size};
-        font-family: "YouAndMe"; 
+        font-family: 'YouAndMe'; 
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1709,15 +1751,11 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
 {/block:IfYouAndMeComics}
 
 {block:IfFarsiChereComics}
-/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
 @font-face {
-    font-family:"Farsi Chehre";
-    src:url("https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/Far_Chehre.eot?") format("eot"),
-    url("https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/Far_Chehre.woff") format("woff"),
-    url("http://static.tumblr.com/qbdaa2m/SU2mytjpw/far_chehre.ttf") format("truetype"),
-    url("https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/Far_Chehre.svg#FarChehre") format("svg");
-    font-weight:normal;
-    font-style:normal;
+    font-family: 'Farsi Chehre';
+    src: url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/far_chehre_minuta.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
     .comicright {
@@ -1726,7 +1764,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 0px -0.08em 5%;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size}; 
-        font-family: "Farsi Chehre";  
+        font-family: 'Farsi Chehre';  
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1772,7 +1810,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 4% -0.08em 0px;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size};
-        font-family: "Farsi Chehre"; 
+        font-family: 'Farsi Chehre'; 
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1814,14 +1852,10 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
     }
 {/block:IfFarsiChereComics}
 
-{block:ifMenschenskinderComics}
-/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+{block:ifMenschenskinderComics} 
 @font-face {
-    font-family:"Menschenskinder";
-    src:url("https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/Menschenskinder.eot?") format("eot"),
-    url("https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/Menschenskinder.woff") format("woff"),
-    url("http://static.tumblr.com/qbdaa2m/BMjn2s7m5/menschenskinder.ttf") format("truetype"),
-    url("https://googledrive.com/host/0Bwjcza_R12TwY2Z5WVB4TnlDV2s/Menschenskinder.svg#Menschenskinder") format("svg");
+    font-family: 'Menschenskinder';
+    src:url(http://minute.altervista.org/fonts/minuta-tumblr-theme/fonts/menschenskinder_minuta.woff2) format('woff2');
     font-weight:normal;
     font-style:normal;
 }
@@ -1832,7 +1866,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 0px -0.08em 5%;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size}; 
-        font-family: "Menschenskinder";  
+        font-family: 'Menschenskinder';  
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -1878,7 +1912,7 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         margin: 0.12em 4% -0.08em 0px;
         padding: 0 0 0 0px;
         font-size: {text:Illustration size};
-        font-family: "Menschenskinder"; 
+        font-family: 'Menschenskinder'; 
         color:{color:Illustration};
         font-weight:normal;
         font-style:normal;
@@ -4038,10 +4072,10 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
             <a href="{RSS}">{lang:RSS}</a></li>
             {/block:IfShowRSS}</h5></div>
             {block:IfShowSearch}
-            <div class="cerca">
+            <div class="cercaimg"><div class="cerca">
             <form action="/search" method="get" class="search">
             <input type="text" name="q" placeholder="{lang:Search}">
-             </form></div>
+             </form></div></div>
             {/block:IfShowSearch}
             </nav>
             
@@ -4150,11 +4184,13 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
                             <a href="{RSS}">{lang:RSS}</a></li>
                         {/block:IfShowRSS}</h5></div>
                         {block:IfShowSearch}
+                        <div class="cercaimg">
                             <div class="cerca">
                                 <form action="/search" method="get" class="search">
                                 <input type="text" name="q" placeholder="{lang:Search}">
                                 </form>
                             </div>
+                        </div>
                         {/block:IfShowSearch}
                     </nav>
                     {block:IfShowFollowing}
@@ -4229,7 +4265,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
           <article class="post text">
           {block:IfShowPostIcons}
             {block:IfShowTextPostIcon}
-            <span class="tipologia">{text:Text Post icon}</span>
+            <div class="icoimg">
+                <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_text_{select:Icons Color}.png">
+            </div>
           {/block:IfShowTextPostIcon}
         {/block:IfShowPostIcons}
          
@@ -4261,7 +4299,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         {block:Photo}
           <article class="post photo">
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Photo Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_photo_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
             <figure>
             {block:IfPhotoAndVideoTitleOnTop}
@@ -4331,7 +4371,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         {block:Panorama}
           <article class="post photo">
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Panorama Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_panorama_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
             <figure>
 			
@@ -4383,7 +4425,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
     {block:Photoset}
         <article class="post photoset">
 			{block:IfShowPostIcons}
-				<span class="tipologia">{text:Photoset Post icon}</span>
+				<div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_photoset_{select:Icons Color}.png">
+                </div>
 			{/block:IfShowPostIcons}
         <figure>
             {block:IfPhotoAndVideoTitleOnTop}
@@ -4442,7 +4486,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
 
         {block:Quote}
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Quote Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_quote_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
             
             {block:IfAuthorBorderWidth}
@@ -4474,7 +4520,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         {block:Link}
           <article class="post link">
              {block:IfShowPostIcons}
-                <span class="tipologia">{text:Link Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_link_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
             <div id="header"><header></div>
                <h2 class="maiuscolo"><a href="{URL}" {Target}>{Name}</a></h2>
@@ -4505,7 +4553,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         {block:Chat}
           <article class="post chat">
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Chat Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_chat_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
             {block:Title}
             <div id="header"><header></div>
@@ -4544,7 +4594,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         {block:Audio}
          <article class="post audio">
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Music Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_audio_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
             <div id="header"><header></div>
                 <h2 class="titolopost">
@@ -4675,7 +4727,10 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
         {block:Video}
           <article class="post video">
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Video Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_video_{select:Icons Color}.png">
+                </div>
+                
             {/block:IfShowPostIcons}
             <figure>
             {block:IfPhotoAndVideoTitleOnTop}
@@ -4721,7 +4776,9 @@ font-variant:small-caps; font-family: {font:Post Title}; color:{color:Post Title
 
         {block:Answer}
             {block:IfShowPostIcons}
-                <span class="tipologia">{text:Answer Post icon}</span>
+                <div class="icoimg">
+                    <img src="https://dl.dropboxusercontent.com/u/13978407/minuta_img/minuta_answer_{select:Icons Color}.png">
+                </div>
             {/block:IfShowPostIcons}
         
           <article class="post answer">
